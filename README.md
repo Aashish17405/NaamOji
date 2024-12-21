@@ -3,8 +3,9 @@
 </p>
 <p align="center"><h1 align="center">NAMEOJI</h1></p>
 <p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
+    <em><a href="https://name-oji.vercel.app/">NameOji.vercel.app</a></em>
 </p>
+
 <p align="center">
 	<img src="https://img.shields.io/github/license/Aashish17405/NameOji?style=default&logo=opensourceinitiative&logoColor=white&color=ff0000" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Aashish17405/NameOji?style=default&logo=git&logoColor=white&color=ff0000" alt="last-commit">
