@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { TextGenerateEffect } from "./components/TextGenerateEffect";
 
 function App() {
   const [name, setName] = useState('');
   const [nameOji, setNameoji] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+
+  const words = 'Where your name meets creativity✨'
 
   const emojiMap = {
     "she": '♀️',
@@ -60,9 +63,7 @@ function App() {
             <h1 className="text-5xl font-bold text-white mb-3 tracking-tight">
               name<span className="text-cyan-400">Oji</span>
             </h1>
-            <p className="text-gray-400">
-              Transform your name into something magical
-            </p>
+            <TextGenerateEffect duration={2} filter={false} words={words} />
           </div>
 
           <div className="space-y-6">
