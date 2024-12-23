@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-grid {
+  mask-image: linear-gradient(to bottom, transparent, 15%, white, 85%, transparent);
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgb(255 255 255 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.1) 1px, transparent 1px);
+  animation: mask-move 10s linear infinite;
+}
+
+@keyframes mask-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}

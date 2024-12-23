@@ -2,10 +2,17 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'gradient-x': 'gradientX 15s ease infinite',
+        'pulse-slow': 'pulseSlow 3s infinite',
+        'spin-slow': 'spin 4s linear infinite',
+      },
+    },
   },
   plugins: [],
 }
+

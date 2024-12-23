@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 function App() {
   const [name, setName] = useState('');
-  const [nameOji, setNameOji] = useState('');
+  const [nameOji, setNameoji] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const emojiMap = {
     "she": '♀️',
@@ -31,45 +32,75 @@ function App() {
     "no": '🙅'
   };
 
-  function handleSubmit() {
+  function generatenameOji() {
     let tempName = name;
+    setIsGenerating(true);
     Object.keys(emojiMap).forEach((key) => {
       const regex = new RegExp(key, 'gi'); // Case insensitive
       tempName = tempName.replace(regex, emojiMap[key]);
     });
-
-    setNameOji(tempName);
+    setTimeout(() => {
+      setNameoji(tempName)
+      setIsGenerating(false)
+    }, 500)
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      <div className="text-center bg-black">
-        <h1 className="text-5xl font-extrabold mb-8 text-yellow-300 drop-shadow-lg">
-          🌟 NameOji Generator 🌟
-        </h1>
-        <div className="bg-white text-gray-800 rounded-lg shadow-2xl p-8 w-full max-w-lg">
-          <input
-            type="text"
-            placeholder="Enter your name"
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-4 border-2 border-gray-300 rounded-lg mb-4 text-lg outline-none focus:ring-4 focus:ring-pink-400"
-          />
-          <button
-            onClick={handleSubmit}
-            className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-lg font-semibold py-3 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
-          >
-            Get NameOji
-          </button>
-          {nameOji && (
-            <div className="mt-6 ">
-              <h2 className="text-2xl font-semibold text-center text-purple-600">Your NameOji:</h2>
-              <p className="mt-3 border border-gray-600 py-4 text-3xl text-center font-bold text-indigo-600">{nameOji}</p>
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 flex flex-col items-center justify-center p-4">
+      {/* Animated background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#1a365d,#0f172a)]"></div>
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid"></div>
+      </div>
+
+      {/* Main content */}
+      <div className="relative w-full max-w-md">
+        <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-8 border border-white/10">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl font-bold text-white mb-3 tracking-tight">
+              name<span className="text-cyan-400">Oji</span>
+            </h1>
+            <p className="text-gray-400">
+              Transform your name into something magical
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex gap-3">
+              <input
+                type="text"
+                placeholder="Enter your name..."
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && generatenameOji()}
+                className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+              />
+              <button 
+                onClick={generatenameOji}
+                disabled={isGenerating}
+                className="px-6 py-3 bg-cyan-500 text-white rounded-xl hover:bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isGenerating ? (
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                ) : 'Generate'}
+              </button>
             </div>
-          )}
+
+            {nameOji && (
+              <div className="transform transition-all duration-500 ease-out">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
+                  <div className="text-4xl font-semibold mb-2">{nameOji}</div>
+                  <div className="text-sm text-gray-400">
+                    Your nameOji is ready to share! ✨
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-        <footer className="mt-8 mr-24 text-sm text-white/90">
-          Made with ❤️ using ReactVite & TailwindCSS
-        </footer>
       </div>
     </div>
   );
