@@ -115,6 +115,7 @@ function App() {
     "suraj": '🌞',
     "sundhya": '🌞',
     "suriya": '🌞',
+    "surya": '🌞',
     "suri": '🌞',
     "maya": '🪞',
     "om": '🕉️',
