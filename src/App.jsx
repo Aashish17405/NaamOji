@@ -122,6 +122,7 @@ function App() {
     "book": '📚',
     "day": '🌅',
     "thi":'🍵',
+    "ti":'🍵',
     "tti":'🍵',
     "eye":'👁️',
     "ai":'👁️',
@@ -146,7 +147,10 @@ function App() {
     "ram": '🍷',
     "tea": '🍵',
     "ri": '🔁',
-    "re": '🔁'
+    "re": '🔁',
+    "pin": '📌',
+    "war": '⚔',
+    "var": '⚔'
   };
 
   function generatenameOji() {
