@@ -10,6 +10,11 @@ function App() {
   const words = 'Where your name meets creativity✨'
 
   const emojiMap = {
+    "raja": '🤴',
+    "raju": '🤴',
+    "raj": '🤴',
+    "krishna": '🪈',
+    "krishn": '🪈',
     "three": '3️⃣',
     "thri": '3️⃣',
     "tri": '3️⃣',
