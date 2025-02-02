@@ -49,6 +49,8 @@ function App() {
     "neeru": '💧',
     "water": '💧',
     "lilly": '🌸',
+    "panch": '👊',
+    "punch": '👊',
     
     // 4 letter
     "book": '📚',
@@ -97,6 +99,8 @@ function App() {
     "rose": '🌹',
     "suri": '🌞',
     "maya": '🪞',
+    "elon": 'L🔛',
+    "star": '⭐',
 
     // 3 letter
     "day": '🌅',
@@ -141,7 +145,6 @@ function App() {
     "ran": '🏃‍♂️',
     "bir": '🍺',
     "gun": '🔫',
-    "gan": '🔫',
     "kow": '🐮',
     "kou": '🐮',
     "cow": '🐮',
@@ -154,6 +157,8 @@ function App() {
     "man": '👨',
     "ant": '🐜',
     "sun": '🌞',
+    "van": '🚐',
+    "sad": '😔',
     
     // 2 letter
     "ki": '🗝️',
@@ -170,7 +175,8 @@ function App() {
     "ek": '1️⃣',
     "ri": '🔁',
     "re": '🔁',
-    "do": '2️⃣',    
+    "do": '2️⃣',
+    "on": '🔛'  
   };
 
   function generatenameOji() {
@@ -210,7 +216,7 @@ function App() {
       <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 border border-white/10">
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
-            Naam<span className="text-cyan-400">Oji</span>
+            Name<span className="text-cyan-400">Oji</span>
           </h1>
           <TextGenerateEffect duration={2} filter={true} words={words} />
         </div>
