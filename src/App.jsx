@@ -3,7 +3,7 @@ import { TextGenerateEffect } from "./components/TextGenerateEffect";
 
 function App() {
   const [name, setName] = useState('');
-  const [nameOji, setNameoji] = useState('');
+  const [naamOji, setNaamOji] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -28,6 +28,9 @@ function App() {
     // 5 letter
     "chaar": '4️⃣',
     "three": '3️⃣',
+    "shaik": "🫨",
+    "shake": "🫨",
+    "sheik": "🫨",
     "phire": '🔥',
     "nippu": '🔥',
     "chand": '🌜',
@@ -101,6 +104,7 @@ function App() {
     "maya": '🪞',
     "elon": 'L🔛',
     "star": '⭐',
+    "ravi": '🌞',
 
     // 3 letter
     "day": '🌅',
@@ -179,7 +183,7 @@ function App() {
     "on": '🔛'  
   };
 
-  function generatenameOji() {
+  function generateNaamOji() {
     let tempName = name;
     setIsGenerating(true);
     Object.keys(emojiMap).forEach((key) => {
@@ -187,13 +191,13 @@ function App() {
       tempName = tempName.replace(regex, emojiMap[key]);
     });
     setTimeout(() => {
-      setNameoji(tempName)
+      setNaamOji(tempName)
       setIsGenerating(false)
     }, 500)
   }
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(nameOji)
+    navigator.clipboard.writeText(naamOji)
     .then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
@@ -216,7 +220,7 @@ function App() {
       <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 border border-white/10">
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
-            Name<span className="text-cyan-400">Oji</span>
+            Naam<span className="text-cyan-400">Oji</span>
           </h1>
           <TextGenerateEffect duration={2} filter={true} words={words} />
         </div>
@@ -228,13 +232,13 @@ function App() {
               placeholder="Enter your name..."
               value={name}
               onChange={(e) => setName(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && generatenameOji()}
+              onKeyDown={(e) => e.key === 'Enter' && generateNaamOji()}
               spellCheck="false"
               autoComplete='true'
               className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
             />
             <button
-              onClick={generatenameOji}
+              onClick={generateNaamOji}
               disabled={isGenerating}
               className="w-full sm:w-auto px-6 py-3 bg-cyan-500 text-white rounded-xl hover:bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
@@ -261,7 +265,7 @@ function App() {
             </button>
           </div>
 
-          {nameOji && (
+          {naamOji && (
             <div className="transform transition-all duration-500 ease-out relative">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 sm:p-6 text-center backdrop-blur-sm">
                 <div className="text-2xl sm:text-4xl font-semibold mb-2 relative">
@@ -273,11 +277,11 @@ function App() {
                     Copied!
                   </span>
                   <button onClick={handleCopy} className="relative">
-                    {nameOji}
+                    {naamOji}
                   </button>
                 </div>
                 <div className="text-sm text-gray-400">
-                  Your nameOji is ready to share! ✨
+                  Your NaamOji is ready to share! ✨
                 </div>
               </div>
             </div>
