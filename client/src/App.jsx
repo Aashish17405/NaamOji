@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TextGenerateEffect } from "./components/TextGenerateEffect";
+import Popup from './components/Popup'; 
 
 function App() {
   const [name, setName] = useState('');
@@ -105,6 +106,7 @@ function App() {
     "elon": 'L🔛',
     "star": '⭐',
     "ravi": '🌞',
+    "paav": '🐾',
 
     // 3 letter
     "day": '🌅',
@@ -152,6 +154,8 @@ function App() {
     "kow": '🐮',
     "kou": '🐮',
     "cow": '🐮',
+    "pav": '🐾',
+    "paw": '🐾',
     "yan": '☯️',
     "vai": '❓',
     "kki": '🗝️',
@@ -163,6 +167,7 @@ function App() {
     "sun": '🌞',
     "van": '🚐',
     "sad": '😔',
+    "aam": '🥭',
     
     // 2 letter
     "ki": '🗝️',
@@ -171,6 +176,7 @@ function App() {
     "vy": '❓',
     "no": '🙅',
     "he": '♂️',
+    "hi": '♂️',
     "om": '🕉️',
     "ti": '☕',
     "ai": '👁️',
@@ -286,6 +292,9 @@ function App() {
               </div>
             </div>
           )}
+          <div className='text-sm text-gray-400 text-center'>
+            <Popup />
+          </div>
         </div>
       </div>
     </div>
