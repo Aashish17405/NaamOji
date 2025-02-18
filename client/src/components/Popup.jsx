@@ -13,7 +13,7 @@ const Popup = () => {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/receive-naamoji', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/receive-naamoji`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,6 +30,7 @@ const Popup = () => {
         setMessage('Oops! Something went wrong. Please try again.');
       }
     } catch (error) {
+      console.error(error);
       setMessage('Unable to submit feedback. Please check your connection.');
     } finally {
       setIsSubmitting(false);
