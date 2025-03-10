@@ -3,7 +3,7 @@
 </p>
 <p align="center"><h1 align="center">NaamOji</h1></p>
 <p align="center">
-    <em><a href="https://name-oji.vercel.app/">NaamOji.vercel.app</a></em>
+    <em><a href="https://naamoji.vercel.app/">NaamOji.vercel.app</a></em>
 </p>
 
 <p align="center">
