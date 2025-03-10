@@ -29,6 +29,7 @@ app.use(cors({
 app.use(limiter);
 app.use(express.json());
 app.use(actionRoutes);
+app.set('trust proxy', true);
 
 // Make the server start after DB connection
 const startServer = async () => {
