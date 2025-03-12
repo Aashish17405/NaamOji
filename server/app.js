@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const limiter = rateLimit({
-	windowMs: 5 * 60 * 1000,
+	windowMs: 1 * 60 * 1000,
 	limit: 5, 
 	standardHeaders: 'draft-8', 
 	legacyHeaders: false,
@@ -29,7 +29,6 @@ app.use(cors({
 app.use(limiter);
 app.use(express.json());
 app.use(actionRoutes);
-app.set('trust proxy', true);
 
 // Make the server start after DB connection
 const startServer = async () => {

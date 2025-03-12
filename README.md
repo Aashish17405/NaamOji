@@ -39,13 +39,17 @@
 
 ## 📍 Overview
 
-<code>❯ REPLACE-ME</code>
+naamOji is a fun and interactive tool that generates unique **emoji-based representations** of names. If a naamOji isn't available for a name, users can request a custom one. The generated naamOji can be copied easily with a single click!  
 
 ---
 
 ## 👾 Features
 
-<code>❯ REPLACE-ME</code>
+- 🔠 **Name to naamOji Conversion** – Automatically generates a naamOji for a given name.  
+- 🚀 **Custom Requests** – If a naamOji isn’t available, users can submit their own via a popup.  
+- 📋 **One-Click Copy** – Easily copy the generated naamOji by clicking on it.  
+- 🖌️ **User-Friendly UI** – Simple and engaging interface for a seamless experience.  
+- 📱 **Fully Responsive** – Works flawlessly on desktops, tablets, and mobile devices.  
 
 ---
 
@@ -73,38 +77,38 @@
 
 ### 📂 Project Index
 <details open>
-	<summary><b><code>NAMEOJI/</code></b></summary>
+	<summary><b><code>NAAMOJI/</code></b></summary>
 	<details> <!-- __root__ Submodule -->
 		<summary><b>__root__</b></summary>
 		<blockquote>
 			<table>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/postcss.config.js'>postcss.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ TailwindCSS PostCSS configuration</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/package-lock.json'>package-lock.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Auto-generated dependencies lock file</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/tailwind.config.js'>tailwind.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ TailwindCSS configuration file</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/vite.config.js'>vite.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Vite configuration for fast builds</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/package.json'>package.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Project metadata & dependencies</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/index.html'>index.html</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Root HTML file for the project</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/eslint.config.js'>eslint.config.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ ESLint configuration for code quality</code></td>
 			</tr>
 			</table>
 		</blockquote>
@@ -115,20 +119,21 @@
 			<table>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/src/index.css'>index.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Global CSS styles</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/src/App.jsx'>App.jsx</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Main React component</code></td>
 			</tr>
 			<tr>
 				<td><b><a href='https://github.com/Aashish17405/NaamOji/blob/master/src/main.jsx'>main.jsx</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
+				<td><code>❯ Renders the React app</code></td>
 			</tr>
 			</table>
 		</blockquote>
 	</details>
 </details>
+
 
 ---
 ## 🚀 Getting Started
@@ -176,25 +181,6 @@ Run NaamOji using the following command:
 ```sh
 ❯ npm start
 ```
-
-
-### 🧪 Testing
-Run the test suite using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm test
-```
-
-
----
-## 📌 Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
 
 ## 🔰 Contributing
 
