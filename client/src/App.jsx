@@ -224,10 +224,13 @@ function App() {
     {/* Main content */}
     <div className="relative w-full max-w-sm px-10 sm:px-0 sm:max-w-md lg:max-w-lg xl:max-w-2xl">
       <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 border border-white/10">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className=" text-center mb-6 sm:mb-8">
+        <div className="flex justify-center items-center">
+          <img src="logo.png" alt="Logo" width={60} className="mr-2" />
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
             Naam<span className="text-cyan-400">Oji</span>
           </h1>
+        </div>
           <TextGenerateEffect duration={2} filter={true} words={words} />
         </div>
 

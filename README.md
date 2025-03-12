@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.icons8.com/?size=512&id=55494&format=png" align="center" width="30%">
+    <img src="https://github.com/user-attachments/assets/d6944c56-c535-49f3-92ab-b8640a070430" align="center" width="30%">
 </p>
 <p align="center"><h1 align="center">NaamOji</h1></p>
 <p align="center">
@@ -29,11 +29,8 @@
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
   - [🤖 Usage](#🤖-usage)
-  - [🧪 Testing](#🧪-testing)
-- [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 - [🎗 License](#-license)
-- [🙌 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -179,7 +176,7 @@ Run NaamOji using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
-❯ npm start
+❯ npm run dev
 ```
 
 ## 🔰 Contributing
