@@ -110,6 +110,7 @@ function App() {
 
     // 3 letter
     "day": '🌅',
+    "air": '💨',
     "thi": '☕',
     "tti": '☕',
     "eye": '👁️',
@@ -226,7 +227,7 @@ function App() {
       <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 border border-white/10">
         <div className=" text-center mb-6 sm:mb-8">
         <div className="flex justify-center items-center">
-          <img src="logo.png" alt="Logo" width={60} className="mr-2" />
+          <img src="https://github.com/user-attachments/assets/d6944c56-c535-49f3-92ab-b8640a070430" alt="Logo" width={60} className="mr-2" />
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
             Naam<span className="text-cyan-400">Oji</span>
           </h1>
