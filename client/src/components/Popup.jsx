@@ -13,7 +13,8 @@ const Popup = () => {
     setMessage('');
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/receive-naamoji`, {
+      // console.log(`${import.meta.env.VITE_BACKEND_URL}`)
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000' }/receive-naamoji`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

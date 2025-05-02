@@ -1,19 +1,19 @@
 const express = require("express");
 const connectDB = require("./src/config/db");
 const actionRoutes = require("./src/routes/actionRoutes");
-const rateLimit = require('express-rate-limit');
+// const rateLimit = require('express-rate-limit');
 const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const limiter = rateLimit({
-	windowMs: 1 * 60 * 1000,
-	limit: 5, 
-	standardHeaders: 'draft-8', 
-	legacyHeaders: false,
-})
+// const limiter = rateLimit({
+// 	windowMs: 1 * 60 * 1000,
+// 	limit: 5, 
+// 	standardHeaders: 'draft-8', 
+// 	legacyHeaders: false,
+// })
 
 const allowedOrigins = [process.env.VITE_APP_URL, 'http://localhost:5173'];
 
@@ -26,11 +26,10 @@ app.use(cors({
     }
   }
 }));
-app.use(limiter);
+// app.use(limiter);
 app.use(express.json());
 app.use(actionRoutes);
 
-// Make the server start after DB connection
 const startServer = async () => {
   try {
     await connectDB();
