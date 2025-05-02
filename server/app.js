@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 // 	legacyHeaders: false,
 // })
 
-const allowedOrigins = [process.env.VITE_APP_URL, 'http://localhost:5173'];
+const allowedOrigins = ['https://naamoji.dev-aashish.tech/', 'http://localhost:5173'];
 
 app.use(cors({
   origin: function (origin, callback) {
